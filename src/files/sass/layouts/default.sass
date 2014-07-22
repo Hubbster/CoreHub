@@ -1,0 +1,52 @@
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+body
+  overflow: hidden
+
+.wrap
+  width: auto
+  left: 270px
+  height: 100%
+  top: 0
+  bottom: 0
+  right: 0
+  float: left
+  position: absolute
+  z-index: 2
+  background-color: #FFFFFF
+  transition: left 0.5s
+  +clearfix
+
+  header
+    position: absolute
+    width: 100%
+    height: 90px
+    padding: 20px
+    float: left
+    background-color: $uibasebg
+    border-bottom: 1px solid $uibaseborder
+
+  article
+    float: left
+    width: 100%
+    overflow-y: auto
+    padding: 20px
+    top: 90px
+    bottom: 60px
+    position: absolute
+    
+  footer
+    width: 100%
+    height: 60px
+    padding: 20px
+    float: left
+    background-color: $uibasebg
+    border-top: 1px solid $uibaseborder
+    position: absolute
+    bottom: 0
+
+.popout-nav .wrap
+  left: 540px

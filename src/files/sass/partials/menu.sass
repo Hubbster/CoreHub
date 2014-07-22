@@ -2,3 +2,67 @@ nav.mainmenu
   ul
     padding: 0
     margin: 0
+
+  li
+    position: relative
+    display: block
+    border-top: 1px solid $uibaseborder
+    font-size: 18px
+    font-weight: 600
+
+    &:last-child
+      border-bottom: 1px solid $uibaseborder
+
+    &.active:after
+      width: 0
+      height: 0
+      border-top: 11px solid rgba(0, 0, 0, 0)
+      border-bottom: 11px solid rgba(0, 0, 0, 0)
+      border-right: 11px solid #4C4C4C
+      content: ""
+      position: absolute
+      top: 18px
+      right: -1px
+
+  a
+    display: block
+    padding: 15px 15px 15px 25px
+    color: lighten( $base-typgography-color, 10% )
+    text-decoration: none
+
+    &:visited
+      color: lighten( $base-typgography-color, 10% )
+
+    &:hover
+      color: #FFFFFF
+
+nav.slideout
+  position: absolute
+  width: 270px
+  height: 100%
+  background-color: #4C4C4C
+  border-right: 1px solid #C2C2C2
+  float: left
+  left: 270px
+  z-index: 1
+  top: 0
+  color: #FFFFFF
+
+  ul
+    margin: 0
+    padding: 0
+    li.header
+      background-color: darken( #4C4C4C, 10% )
+      padding: 10px 10px 10px 20px
+    li
+      display: block
+      font-size: 18px
+    a
+      display: block
+      padding: 10px 10px 10px 20px
+      color: #FFFFFF
+      text-decoration: none
+      &:visited, &:active
+        color: #FFFFFF
+
+
