@@ -14,9 +14,8 @@ head
     |CoreHub
   meta(name="description", content="")
   meta(name="viewport", content="width=device-width, initial-scale=1")
-  //Place favicon.ico and apple-touch-icon.png in the root directory
   != getBlock('meta').add(site.meta).toHTML()
-  != getBlock("styles").add(site.styles).toHTML()
+  link(rel='stylesheet', type='text/css', href='/css/style.css')
   link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700', rel='stylesheet', type='text/css')
   script(src="js/vendor/modernizr-2.6.2.min.js")
 body
@@ -33,14 +32,18 @@ body
   .wrap
     header
       h1 Översikt
-    article
+    .main
       != content
     footer
-      p Footer
-  script.
-    window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
-  != getBlock('scripts').add(site.scripts, {defer:false}).toHTML()
-  // Google Analytics: change UA-XXXXX-X to be your sites ID.
+      .switch-holder
+        span Förhållanden
+        label.label-switch
+          input(type="checkbox")
+          .checkbox
+        span Absoluta värden
+  script(src="js/vendor/jquery-1.10.2.min.js")
+  script(src="js/plugins.js")
+  script(src="js/main.js")
   script.
     (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
     function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
