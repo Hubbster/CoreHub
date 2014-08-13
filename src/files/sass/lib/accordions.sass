@@ -1,0 +1,35 @@
+.accordion
+  $accordion-border-color: $base-border-color
+  $accordion-border: 1px solid $accordion-border-color
+  +clearfix
+  border: 1px solid $base-border-color
+  border-radius: $base-border-radius
+  margin-bottom: $base-line-height
+  padding: 0
+
+  li.accordion-header-and-content
+
+    &:first-child a.accordion-link
+      border-top: 0
+    &:last-child a.accordion-link
+
+  li.accordion-header-and-content a.accordion-link
+    background-color: $uibasebg
+    border-top: 1px solid $base-border-color
+    display: block
+    font-weight: bold
+    padding: $base-line-height / 2
+
+    &:hover
+      color: $base-link-color
+    &:focus
+      outline: none
+    &.is-active
+      background-color: darken($uibasebg, 3%)
+      border-bottom: 0
+
+  li.accordion-header-and-content .accordion-content
+    padding: $base-line-height
+    display: none
+    overflow: hidden
+    width: 100%

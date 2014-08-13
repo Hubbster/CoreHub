@@ -1,1 +1,225 @@
-system-settings.html.jade
+---
+layout: default
+title: "Systeminställningar"
+---
+
+ul.tabs
+  li.tab-header-and-content
+    a.tab-link(href='#') Grundinställningar
+    .tab-content
+      span.headline Företagsuppgifter
+      p
+        label(for='headline') Företagsnamn:
+        input#headline(type='text', placeholder='Företagsnamn')
+      p
+        label(for='headline') Faktureringsreferens:
+        input#headline(type='text', placeholder='Faktureringsreferens')
+      p
+        label(for='headline') Faktureringsadress:
+        input#headline(type='text', placeholder='Faktureringsadress')
+      p
+        label(for='headline') Postnummer:
+        input#headline(type='text', placeholder='Postnummer')
+      p
+        label(for='headline') Stad:
+        input#headline(type='text', placeholder='Stad')
+      p
+        label(for='headline') Land:
+        input#headline(type='text', placeholder='Land')
+      p
+        label(for='headline') Delstat (om tillämpligt):
+        input#headline(type='text', placeholder='Delstat')
+
+      span.headline Uppgifter
+      p
+        label(for='headline') Namn på verktyget:
+        input#headline(type='text', placeholder='CoreHub')
+      p
+        label(for='select-language') Standardspråk:
+        select(name='select-language')
+          optgroup(label='Välj standardspråk för nya användare')
+            option(value='1') English
+            option(value='2') Swedish
+
+      span.headline Design
+      p
+        label(for='headline') Färgschema:
+        input#color(type='text' value="#333399")
+      p
+        label(for='radio_buttons') Typsnitt:
+          label
+            input.radio(type='radio', name='radio_button', value='radio_1' selected)
+            | Välj i lista (rekomenderas)
+          label
+            input.radio(type='radio', name='radio_button', value='radio_2')
+            | Installera ett eget typsnitt (avancerat)
+      p
+        label(for='file') Logotyp:
+          button hej
+          input.file(type='file', name='file')
+
+
+  li.tab-header-and-content
+    a.tab-link(href='#') Flöden
+    .tab-content
+      span.headline Systemgenererade epostmeddelanden
+      ul.accordion
+        li.accordion-header-and-content
+          a.accordion-link(href='#') Ambassadörsinbjudan
+          .accordion-content
+            p
+              label(for='headline') Rubrik:
+              input#headline(type='text', placeholder='Hej, %USER_FULL_NAME%')
+
+            p
+              label(for='message') Meddelande:
+              textarea#message(rows='10', placeholder='Hej, %USER_FULL_NAME%! At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus')
+
+        li.accordion-header-and-content
+          a.accordion-link(href='#') Påminnelsemail
+          .accordion-content
+            p
+              label(for='headline') Rubrik:
+              input#headline(type='text', placeholder='Hej, %USER_FULL_NAME%')
+
+            p
+              label(for='message') Meddelande:
+              textarea#message(rows='10', placeholder='Hej, %USER_FULL_NAME%! At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus')
+
+        li.accordion-header-and-content
+          a.accordion-link(href='#') Peppmail
+          .accordion-content
+            p
+              label(for='headline') Rubrik:
+              input#headline(type='text', placeholder='Hej, %USER_FULL_NAME%')
+
+            p
+              label(for='message') Meddelande:
+              textarea#message(rows='10', placeholder='Hej, %USER_FULL_NAME%! At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus')
+      span.headline Tidsramer för aktiviter
+      form
+        p
+          label(for='select_element') Kort tidsram:
+          select(name='select_element')
+            optgroup(label='Välj en tidsram')
+              option(value='1') 1 månad(er)
+              option(value='2') 2 månad(er)
+        p
+          label(for='select_element') Medellång tidsram:
+          select(name='select_element')
+            optgroup(label='Välj en tidsram')
+              option(value='1') 3 månad(er)
+              option(value='2') 4 månad(er)
+        p
+          label(for='select_element') Lång tidsram:
+          select(name='select_element')
+            optgroup(label='Välj en tidsram')
+              option(value='1') 5 månad(er)
+              option(value='2') 6 månad(er)
+      span.headline Påminnelser
+      form
+        p
+          label.bold Påminnelse 1
+          label
+            input.checkbox(type='checkbox', name='checkboxes', value='check_1')
+            | Aktiv
+          label(for='select_element') Mottagare:
+          select(name='select_element')
+            optgroup(label='Välj vem som skall få påminnelsen')
+              option(value='1') Ansvarig
+              option(value='2') 
+          label(for='select_element') Tidsram:
+          select(name='select_element')
+            optgroup(label='Välj när påminnelsen skall gå ut')
+              option(value='1') Halvtid (50% av utsatt tid)
+        p
+          label.bold Påminnelse 2
+          label
+            input.checkbox(type='checkbox', name='checkboxes', value='check_1')
+            | Aktiv
+          label(for='select_element') Mottagare:
+          select(name='select_element')
+            optgroup(label='Välj vem som skall få påminnelsen')
+              option(value='1') Ansvarig
+              option(value='2') 
+          label(for='select_element') Tidsram:
+          select(name='select_element')
+            optgroup(label='Välj när påminnelsen skall gå ut')
+              option(value='1') Halvtid (50% av utsatt tid)
+        p
+          label.bold Påminnelse 3
+          label
+            input.checkbox(type='checkbox', name='checkboxes', value='check_1')
+            | Aktiv
+          label(for='select_element') Mottagare:
+          select(name='select_element')
+            optgroup(label='Välj vem som skall få påminnelsen')
+              option(value='1') Ansvarig
+              option(value='2') 
+          label(for='select_element') Tidsram:
+          select(name='select_element')
+            optgroup(label='Välj när påminnelsen skall gå ut')
+              option(value='1') Halvtid (50% av utsatt tid)
+        p
+          label.bold Påminnelse 4
+          label
+            input.checkbox(type='checkbox', name='checkboxes', value='check_1')
+            | Aktiv
+          label(for='select_element') Mottagare:
+          select(name='select_element')
+            optgroup(label='Välj vem som skall få påminnelsen')
+              option(value='1') Ansvarig
+              option(value='2') 
+          label(for='select_element') Tidsram:
+          select(name='select_element')
+            optgroup(label='Välj när påminnelsen skall gå ut')
+              option(value='1') Halvtid (50% av utsatt tid)
+
+
+      span.headline Egna aktivitetsfält
+      form
+        ul.accordion
+          li.accordion-header-and-content
+            a.accordion-link(href='#') Eget fält 1
+            .accordion-content
+              p
+                label(for='headline') Namn:
+                input#headline(type='text', placeholder='Ange ett namn på fältet')
+              p
+                label(for='select-type-1') Typ
+                select(name='select-type-1')
+                  optgroup(label='Välj en typ')
+                    option(value='1') Text
+                    option(value='2') Numeriskt värde
+              p
+                label
+                  input.checkbox(type='checkbox', name='checkboxes', value='check_1')
+                  | Aktiv
+
+          li.accordion-header-and-content
+            a.accordion-link(href='#') Eget fält 2
+            .accordion-content
+              p
+                label(for='headline') Namn:
+                input#headline(type='text', placeholder='Ange ett namn på fältet')
+              p
+                label(for='select-type-1') Typ
+                select(name='select-type-1')
+                  optgroup(label='Välj en typ')
+                    option(value='1') Text
+                    option(value='2') Numeriskt värde
+              p
+                label
+                  input.checkbox(type='checkbox', name='checkboxes', value='check_1')
+                  | Aktiv
+  li.tab-header-and-content
+    a.tab-link(href='#') Användare
+    .tab-content
+      p
+        | Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna, mollis vel suscipit in, pharetra at ligula. Pellentesque a est vel est fermentum pellentesque sed sit amet dolor. Nunc in dapibus nibh. Aliquam erat volutpat. Phasellus vel dui sed nibh iaculis convallis id sit amet urna. Proin nec tellus quis justo consequat accumsan. Vivamus turpis enim, auctor eget placerat eget, aliquam ut sapien.
+  li.tab-header-and-content
+    a.tab-link(href='#') Master admin
+    .tab-content
+      p
+        | Sociis natoque pe
+input(type='submit', value='Skicka')

@@ -1,9 +1,11 @@
 // Colors
 $uibasebg: #F7F7F7
-$uibaseborder: #DDDDDD
-$base-font-color: #4C4C4C
-
 $base-border-color: #DDDDDD
+$base-font-color: #4C4C4C
+$customer-theme-color: #D58230
+$base-button-color: $customer-theme-color 
+
+$uibaseborder: #DDDDDD
 
 // Typography
 $base-font-family: "open sans", helvetica neue, helvetica, arial, sans-serif
@@ -21,3 +23,13 @@ $hover-link-color: $base-font-color
 
 // Roundings
 $base-border-radius: em(3)
+
+// Forms
+$form-border-color: $base-border-color
+$form-border-color-hover: darken($base-border-color, 10)
+$form-border-color-focus: $customer-theme-color
+$form-border-radius: $base-border-radius
+$form-box-shadow: inset 0 1px 3px rgba(0,0,0,0.06)
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7)
+$form-font-size: $base-font-size
+$form-font-family: $base-font-family
