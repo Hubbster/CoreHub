@@ -18,37 +18,37 @@ $(window).resize(function(){
 
 // Charts
 
-// var data = [      
-//   {
-//     value : 30,
-//     color: '#F38630',
-//     label: "Ej bokad workshop"
-//   },
-//   {
-//     value : 50,
-//     color: '#E0E4CC',
-//     label: "Bokad workshop"
-//   },
-//   {
-//     value : 100,
-//     color: '#69D2E7',
-//     label: "Avslutad workshop"
-//   },
-// ];
+var data = [      
+  {
+    value : 30,
+    color: '#F38630',
+    label: "Ej bokad workshop"
+  },
+  {
+    value : 50,
+    color: '#E0E4CC',
+    label: "Bokad workshop"
+  },
+  {
+    value : 100,
+    color: '#69D2E7',
+    label: "Avslutad workshop"
+  },
+];
 
-// Chart.defaults.Doughnut = {
-//   segmentShowStroke : true,
-//   segmentStrokeWidth : 1, 
-//   segmentStrokeColor : '#FFFFFF', 
-//   percentageInnerCutout : 50, 
-//   animation : true,
-//   animationSteps : 100, 
-//   animateRotate : true,
-//   responsive: true,
-//   animateScale : false, 
-//   animationEasing: 'easeOutQuart',
-//   legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>",
-// }
+Chart.defaults.Doughnut = {
+  segmentShowStroke : true,
+  segmentStrokeWidth : 1, 
+  segmentStrokeColor : '#FFFFFF', 
+  percentageInnerCutout : 50, 
+  animation : true,
+  animationSteps : 100, 
+  animateRotate : true,
+  responsive: true,
+  animateScale : false, 
+  animationEasing: 'easeOutQuart',
+  legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>",
+}
 
 // var ctx = $("#cs_doughnut_chart").get(0).getContext("2d");
 // var myDoughnut = new Chart(ctx).Doughnut(data);
@@ -97,4 +97,12 @@ $(document).ready(function () {
 
 $(document).ready(function($) {
   $('#color').colorPicker();
+});
+
+$( "#edit-this-content" ).click(function() {
+  $( ".markdowneditor" ).toggleClass( "visible" );
+});
+
+$( "#close" ).click(function() {
+  $( ".markdowneditor" ).removeClass( "visible" );
 });

@@ -1,0 +1,41 @@
+.markdowneditor
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background: #FFFFFF
+  z-index: 9998
+  visibility: hidden
+  opacity: 0
+  @include transition (opacity .3s ease-in-out)
+
+  &.visible
+    visibility: visible
+    opacity: 1
+    @include transition (opacity .2s ease-in-out)
+  .toolbar
+    height: 80px
+    background-color: $uibasebg
+    border-bottom: 1px solid $base-border-color
+
+  %inputarea
+    width: 50%
+    float: left
+    overflow: auto
+    padding: $base-line-height / 2
+    z-index: 9999
+    position: fixed
+    top: 80px
+    right: 0
+    bottom: 0
+    left: 0
+
+  .in
+    @extend %inputarea
+
+  .out
+    @extend %inputarea
+    box-shadow: inset 1px 0 rgba(0, 128, 255, 0.06)
+    background-color: #F6F7F9
+    left: 50%
